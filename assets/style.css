@@ -1,0 +1,82 @@
+@import url("./icons/icons.css");
+
+.header {
+	box-shadow: 0px 5px 16px 3px rgba(0, 0, 255, 0.2);
+}
+
+.header-navbar {
+	position: relative;
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: left;
+	padding: 0.5rem 1rem;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 20% 40% 40%;
+}
+
+.main__canvas-wrapper {
+	width: 32vw;
+	height: 32vw;
+	margin: 1vw auto;
+	background-color: snow;
+	position: relative;
+}
+
+.canvas__canvas-grid,
+.canvas__canvas-draw {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+[class*="-navbar"] {
+	display: flex;
+}
+
+.navbar-text {
+	display: block;
+	justify-self: left;
+	margin: 0 1em;
+}
+
+.btn {
+	display: block;
+	margin: 1px;
+}
+
+.button-text {
+	font-size: 0.5em;
+}
+
+[class*="icon"] {
+	font-size: 30px;
+}
+.mainMenu {
+}
+
+[class*="absolute"] {
+	position: absolute;
+}
+
+[class*="-left"] {
+	left: 1.5em;
+}
+
+[class*="-right"] {
+	right: 1.5em;
+}
+
+[class*="-top"] {
+	top: 4.5em;
+}
+
+[class*="-bottom"] {
+	bottom: 4.5em;
+}
