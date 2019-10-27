@@ -21,7 +21,6 @@ function checkThisSize(el, size, address) {
 	const arr = (async () => {
 		dataImage(address, size);
 	})();
-	console.log(arr);
 }
 
 function checkThisSizeImage(el, address) {
@@ -57,7 +56,6 @@ async function dataImage(address, size) {
 
 function switcher(el) {
 	if (app.activeMenuItem && app.activeMenuItem != el) {
-		console.log(app.activeMenuItem);
 		app.activeMenuItem.classList.toggle("icon-blank");
 		app.activeMenuItem.classList.toggle("icon-check");
 	}
