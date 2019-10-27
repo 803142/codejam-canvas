@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./assets/style.css" />
+		<title>Codejam Canvas</title>
+	</head>
+	<body class="body">
+		<header class="header">
+			<nav class="header-navbar">
+				<button
+					id="menuButton"
+					type="button"
+					class="btn icon-block-menu"
+				></button>
+				<span class="navbar-text">
+					Open Menu
+				</span>
+			</nav>
+			<nav class="absolute-top-left">
+				<button
+					type="button"
+					class="btn icon-brush"
+					title="Paint bucket"
+				></button>
+				<button
+					type="button"
+					class="btn icon-marker"
+					title="Choose color"
+				></button>
+				<button type="button" class="btn icon-directions" title="Move"></button>
+				<button
+					type="button"
+					class="btn icon-arrow-curve-recycle"
+					title="Transform"
+				></button>
+			</nav>
+			<nav class="header-nav_resize  absolute-top-right">
+				<button
+					type="button"
+					class="btn icon-blank"
+					title="4x4"
+					onclick="checkThisSize(this,4,'./assets/data/4x4.json')"
+				>
+					<span class="button-text">4x4</span>
+				</button>
+				<button
+					type="button"
+					class="btn icon-blank"
+					title="32x32"
+					onclick="checkThisSize(this,32,'./assets/data/32x32.json')"
+				>
+					<span class="button-text">32x32</span>
+				</button>
+				<button
+					type="button"
+					class="btn icon-blank"
+					title="512x512"
+					onclick="checkThisSizeImage(this,'./assets/data/image.png')"
+				>
+					<span class="button-text">512x512</span>
+				</button>
+			</nav>
+		</header>
+		<main class="main">
+			<div class="main__canvas-column"></div>
+			<div class="main__canvas-wrapper">
+				<canvas class="canvas__canvas-grid" width="512" height="512"></canvas>
+			</div>
+			<div class="main__canvas-manipulator"></div>
+		</main>
+		<footer class="footer"></footer>
+		<script src="./assets/index.js"></script>
+	</body>
+</html>
