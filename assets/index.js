@@ -20,18 +20,13 @@ class App {
 	}
 }
 
-function checkThisSize(size, address) {
-	const arr = dataImage(address);
+function checkThisSize(el, size, address) {
+	switcher(el);
+	app.activeMenuItem = el;
 }
-function checkThisSizeImage(size, address) {
-	if (app.activeMenuItem && app.activeMenuItem != size) {
-		console.log(app.activeMenuItem);
-		app.activeMenuItem.classList.toggle("icon-blank");
-		app.activeMenuItem.classList.toggle("icon-check");
-	}
-	size.classList.toggle("icon-blank");
-	size.classList.toggle("icon-check");
-	app.activeMenuItem = size;
+function checkThisSizeImage(el, address) {
+	switcher(el);
+	app.activeMenuItem = el;
 	const canvasToDraw = document.querySelector(
 		'canvas[class="canvas__canvas-grid"]'
 	);
@@ -45,9 +40,7 @@ function checkThisSizeImage(size, address) {
 	function drawImageActualSize() {
 		canvasToDraw.width = this.naturalWidth;
 		canvasToDraw.height = this.naturalHeight;
-		console.log(this.naturalWidth, this.naturalHeight);
 		ctx.drawImage(this, 0, 0);
-
 		ctx.drawImage(this, 0, 0, this.width, this.height);
 	}
 }
@@ -57,6 +50,16 @@ async function dataImage(address) {
 		.then(response => response.json())
 		.catch(error => console.log("Request failed", error));
 	return result;
+}
+
+function switcher(el) {
+	if (app.activeMenuItem && app.activeMenuItem != el) {
+		console.log(app.activeMenuItem);
+		app.activeMenuItem.classList.toggle("icon-blank");
+		app.activeMenuItem.classList.toggle("icon-check");
+	}
+	el.classList.toggle("icon-blank");
+	el.classList.toggle("icon-check");
 }
 
 class MainFrame {
